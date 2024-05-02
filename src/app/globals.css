@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.links::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  top: -19px;
+  right: 5px;
+  background-color: transparent;
+}
+.links li {
+  padding: 12px;
+  font-size: 13px;
+}
+.links li a {
+  @apply hover:ml-4 transition-all ease-linear;
+}
+.links li:not(:last-child) {
+  @apply border-b-2 border-[#ddd];
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 30%);
+  height: 100vh;
+}
+.card {
+  @apply flex flex-col gap-0 justify-center items-center text-center text-[20px];
+}
+.cards {
+  @apply relative bg-white duration-200 max-w-[360px] rounded-b-xl scale-[0.9] hover:scale-[1] hover:rotate-2;
+}
+.imagee {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.srv {
+  @apply flex  mb-[40px] gap-5;
+}
+.icon {
+  @apply text-[#01094a]  text-[2em];
+}
+.image {
+  text-align: center;
+  position: relative;
+}
+.image::before {
+  content: "";
+  background-color: #53566d;
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.special-heading {
+  font-size: 90px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  color: #ebeced;
+  margin: 0;
+}
+.info {
+  @apply p-5;
+}
+.image1::before {
+  content: "";
+  position: absolute;
+  background-color: #ebeced;
+  width: 100px;
+  height: calc(100% + 53px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.image1::after {
+  top: -40px;
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: calc(100% + 53px);
+  border-left: 80px solid #53566d;
+  border-bottom: 80px solid #53566d;
+  z-index: -1;
+  right: -90px;
+}
